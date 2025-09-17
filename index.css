@@ -1,0 +1,231 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body and Background */
+body {
+    background: linear-gradient(135deg, #3b3a3a, #ffe3b3);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Header */
+h1 {
+    color: #e3fa12;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    font-size: 2.5rem;
+}
+
+/* Main Input Box */
+.main {
+    width: 400px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: width 0.3s ease;
+}
+
+/* Inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 2px solid #ff4d6d;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff85a2;
+    box-shadow: 0 0 10px rgba(255,77,109,0.4);
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.Add {
+    background: linear-gradient(145deg, #ff4d6d, #ff85a2);
+    color: white;
+}
+
+.Add:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,77,109,0.4);
+}
+
+.clearAll {
+    background: linear-gradient(145deg, #ffa64d, #ffd680);
+    color: white;
+}
+
+.clearAll:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255,166,77,0.4);
+}
+
+/* Task Container */
+.content {
+    width: 95%;
+    margin-top: 20px;
+}
+
+.alltask {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Task Item */
+dl {
+    background: linear-gradient(145deg, #fff, #ffe6f0);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 8px solid #ff4d6d;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+dl:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+dt {
+    font-weight: bold;
+    color: #ff4d6d;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+dd {
+    margin-left: 20px;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.btndiv {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Buttons inside Tasks */
+.delete-btn {
+    background: #ff5c5c;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.delete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,92,92,0.4);
+}
+
+.edit-btn {
+    background: #4da6ff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.edit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(77,166,255,0.4);
+}
+
+.complete-btn {
+    background: #28a745;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.complete-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(40,167,69,0.4);
+}
+
+/* Completed Task Style */
+dl.completed {
+    background: #5bbd72; /* bright green */
+    color: rgb(123, 156, 131);
+    opacity: 0.9;
+    border-left: 8px solid #1e7e34;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .main {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 12px; /* keep buttons small */
+        flex: initial; /* do not stretch */
+    }
+
+    dt {
+        font-size: 1rem;
+    }
+
+    dd {
+        font-size: 0.9rem;
+        margin-left: 10px;
+    }
+
+    .btndiv {
+        flex-direction: row;
+        flex-wrap: wrap; /* wrap if buttons overflow */
+        gap: 5px;
+    }
+
+    .btn-group {
+        flex-direction: row;
+        gap: 8px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .main {
+        width: 80%;
+    }
+}
