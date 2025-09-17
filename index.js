@@ -58,6 +58,8 @@ addtaskbtn.addEventListener("click", function () {
         completeBtn.classList.add("complete-btn");
         completeBtn.innerText = "Mark as Completed";
         completeBtn.addEventListener("click", function () {
+             const userConfirmed = confirm("Are you sure you want to mark as completed ?");
+            if (userConfirmed){
             dl.classList.add("completed"); // light green background
             dt.style.textDecoration = "line-through";
             dt.style.color = "rgba(94, 66, 88, 1)";
@@ -66,7 +68,8 @@ addtaskbtn.addEventListener("click", function () {
             completeBtn.style.color = "rgba(212, 173, 45, 1)";
             completeBtn.disabled = true; // disable the button after marking as completed
             editBtn.style.display = "none"; // disable edit button after marking as completed
-            dlttask.style.display = "none"; // disable delete button after marking as completed
+            dlttask.style.display = "none"; // disable delete button after marking as completed 
+            }
 
 
         });
