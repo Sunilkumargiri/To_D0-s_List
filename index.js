@@ -68,7 +68,7 @@ addtaskbtn.addEventListener("click", function () {
             completeBtn.style.color = "rgba(212, 173, 45, 1)";
             completeBtn.disabled = true; // disable the button after marking as completed
             editBtn.style.display = "none"; // disable edit button after marking as completed
-            dlttask.style.display = "none"; // disable delete button after marking as completed 
+            // dlttask.style.display = "none"; // disable delete button after marking as completed 
             }
 
 
